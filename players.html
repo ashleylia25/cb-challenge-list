@@ -2,42 +2,70 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Players</title>
+<title>CBCL - Stats Viewer</title>
 <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
+<!-- Navbar -->
 <nav class="navbar">
-  <div class="logo">CB Challenge List</div>
-
+  <div class="logo">CBCL</div>
   <div class="nav-links">
     <a href="index.html">List</a>
-    <a href="players.html">Players</a>
+    <a href="players.html">Stats Viewer</a>
   </div>
 </nav>
 
+<!-- Container -->
 <div class="container">
+  <h1>Stats Viewer</h1>
+  <table class="list-table">
+    <thead>
+      <tr>
+        <th>Rank</th>
+        <th>Player</th>
+        <th>Points</th>
+      </tr>
+    </thead>
+    <tbody id="playersList"></tbody>
+  </table>
+</div>
 
-<h1>Player Rankings</h1>
+<!-- Player Stats Modal -->
+<div id="playerModal" class="modal">
+  <div class="modal-content">
+    <span id="closeModal">&times;</span>
+    <h2 id="modalPlayerName"></h2>
 
-<table class="list-table">
+    <div class="modal-summary">
+      <p><strong>Total Points:</strong> <span id="modalPoints"></span></p>
+      <p><strong>Challenges Completed:</strong> <span id="modalCompletedCount"></span></p>
+      <p><strong>Challenges Verified:</strong> <span id="modalVerifiedCount"></span></p>
+      <p><strong>Challenges Created:</strong> <span id="modalCreatedCount"></span></p>
+    </div>
 
-<thead>
-<tr>
-<th>Rank</th>
-<th>Player</th>
-<th>Points</th>
-</tr>
-</thead>
+    <div class="modal-breakdown">
+      <h3>Completed Levels</h3>
+      <ul id="modalCompletedList"></ul>
 
-<tbody id="players"></tbody>
+      <h3>Verified Levels</h3>
+      <ul id="modalVerifiedList"></ul>
 
-</table>
-
+      <h3>Created Levels</h3>
+      <ul id="modalCreatedList"></ul>
+    </div>
+  </div>
 </div>
 
 <script src="script.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  if (document.getElementById("playersList")) {
+    calculateScores();
+    setupModal();
+  }
+});
+</script>
 
 </body>
 </html>

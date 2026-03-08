@@ -2,42 +2,44 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>CBCL</title>
+<title>CBCL - Challenge List</title>
 <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <nav class="navbar">
-  <div class="logo">CB Challenge List</div>
-
+  <div class="logo">CBCL</div>
   <div class="nav-links">
     <a href="index.html">List</a>
-    <a href="players.html">Players</a>
+    <a href="players.html">Stats Viewer</a>
   </div>
 </nav>
 
 <div class="container">
+  <h1 style="text-align: center;">CBCL Challenge List</h1>
+  <input type="text" id="search" placeholder="Search levels or creators..." />
 
-<h1>Main List</h1>
-
-<table class="list-table">
-
-<thead>
-<tr>
-<th>Rank</th>
-<th>Level</th>
-<th>Creator</th>
-</tr>
-</thead>
-
-<tbody id="list"></tbody>
-
-</table>
-
+  <table class="list-table">
+    <thead>
+      <tr>
+        <th>Rank</th>
+        <th>Level</th>
+        <th>Creator</th>
+      </tr>
+    </thead>
+    <tbody id="list"></tbody>
+  </table>
 </div>
 
 <script src="script.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  if (document.getElementById("list")) {
+    loadList();
+    enableSearch();
+  }
+});
+</script>
 
 </body>
 </html>
