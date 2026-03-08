@@ -1,5 +1,5 @@
 function loadList() {
-  fetch("levels.json")
+  fetch("./levels.json")
     .then(r => r.json())
     .then(levels => {
       const table = document.getElementById("list");
@@ -16,26 +16,30 @@ function loadList() {
         const row = document.createElement("tr");
         row.innerHTML = `
           <td><span class="rank ${rankClass}">#${l.rank}</span></td>
-          <td><a href="level.html?id=${l.id}" class="levelName">${l.name}</a></td>
+          <td><a href="./level.html?id=${l.id}" class="levelName">${l.name}</a></td>
           <td>${l.creator}</td>
         `;
         table.appendChild(row);
       });
     });
+
   const searchInput = document.getElementById("search");
+  if (!searchInput) return;
   searchInput.addEventListener("input", () => {
     const filter = searchInput.value.toLowerCase();
     const table = document.getElementById("list");
     Array.from(table.rows).forEach(row => {
       const levelName = row.querySelector("td:nth-child(2)").textContent.toLowerCase();
-      row.style.display = levelName.includes(filter) ? "" : "none";
+      const creator = row.querySelector("td:nth-child(3)").textContent.toLowerCase();
+      row.style.display = (levelName.includes(filter) || creator.includes(filter)) ? "" : "none";
     });
   });
 }
+
 function loadLevel() {
   const params = new URLSearchParams(window.location.search);
   const id = params.get("id");
-  fetch("levels.json")
+  fetch("./levels.json")
     .then(r => r.json())
     .then(levels => {
       const level = levels.find(l => l.id == id);
@@ -46,26 +50,31 @@ function loadLevel() {
       document.getElementById("verifier").textContent = level.verifier;
       document.getElementById("rank").textContent = "#" + level.rank;
       document.getElementById("points").textContent = level.points + " pts";
+
       const videoContainer = document.getElementById("videoContainer");
-      const embed = level.video.replace("watch?v=", "embed/");
-      videoContainer.innerHTML = `<iframe width="700" height="400" src="${embed}" frameborder="0" allowfullscreen></iframe>`;
+      if (videoContainer && level.video) {
+        const embed = level.video.replace("watch?v=", "embed/");
+        videoContainer.innerHTML = `<iframe width="700" height="400" src="${embed}" frameborder="0" allowfullscreen></iframe>`;
+      }
     });
-  fetch("records.json")
+
+  fetch("./records.json")
     .then(r => r.json())
     .then(records => {
       const table = document.getElementById("records");
+      if (!table) return;
       table.innerHTML = "";
       records
         .filter(r => r.level_id == id)
         .filter(r => {
-          const level = JSON.parse(localStorage.getItem("levels")).find(l => l.id == id)
-          return r.player !== level.verifier
+          const level = JSON.parse(localStorage.getItem("levels")).find(l => l.id == id);
+          return r.player !== level.verifier;
         })
         .forEach(rec => {
           const row = document.createElement("tr");
           row.innerHTML = `
             <td>${rec.player}</td>
-            <td><a href="${rec.video}">Video</a></td>
+            <td><a href="${rec.video}" target="_blank">Video</a></td>
           `;
           table.appendChild(row);
         });
@@ -76,10 +85,10 @@ function calculateScores() {
   const scores = {};
   let players = [];
 
-  fetch("levels.json")
+  fetch("./levels.json")
     .then(r => r.json())
     .then(levels => {
-      fetch("records.json")
+      fetch("./records.json")
         .then(r => r.json())
         .then(records => {
 
@@ -96,22 +105,23 @@ function calculateScores() {
 
           const leaderboard = Object.entries(scores).sort((a,b) => b[1]-a[1]);
           const table = document.getElementById("playersList");
+          if (!table) return;
           table.innerHTML = "";
 
           leaderboard.forEach(([player, pts], idx) => {
-  let rankClass = "";
-  if (idx === 0) rankClass = "top1";
-  else if (idx === 1) rankClass = "top2";
-  else if (idx === 2) rankClass = "top3";
+            let rankClass = "";
+            if (idx === 0) rankClass = "top1";
+            else if (idx === 1) rankClass = "top2";
+            else if (idx === 2) rankClass = "top3";
 
-  const row = document.createElement("tr");
-  row.innerHTML = `
-    <td><span class="rank ${rankClass}">#${idx + 1}</span></td>
-    <td class="playerName" data-player="${player}">${player}</td>
-    <td>${pts} pts</td>
-  `;
-  table.appendChild(row);
-});
+            const row = document.createElement("tr");
+            row.innerHTML = `
+              <td><span class="rank ${rankClass}">#${idx + 1}</span></td>
+              <td class="playerName" data-player="${player}">${player}</td>
+              <td>${pts} pts</td>
+            `;
+            table.appendChild(row);
+          });
 
           document.querySelectorAll(".playerName").forEach(el => {
             el.addEventListener("click", () => {
@@ -145,7 +155,7 @@ function showPlayerStats(player, levels, records) {
   completedList.innerHTML = "";
   completedLevels.forEach(l => {
     const li = document.createElement("li");
-    li.innerHTML = `<a href="level.html?id=${l.id}">#${l.rank} - ${l.name} (${l.points})</a>`;
+    li.innerHTML = `<a href="./level.html?id=${l.id}">#${l.rank} - ${l.name} (${l.points})</a>`;
     completedList.appendChild(li);
   });
 
@@ -153,7 +163,7 @@ function showPlayerStats(player, levels, records) {
   verifiedList.innerHTML = "";
   verifiedLevels.forEach(l => {
     const li = document.createElement("li");
-    li.innerHTML = `<a href="level.html?id=${l.id}">#${l.rank} - ${l.name}</a>`;
+    li.innerHTML = `<a href="./level.html?id=${l.id}">#${l.rank} - ${l.name}</a>`;
     verifiedList.appendChild(li);
   });
 
@@ -161,7 +171,7 @@ function showPlayerStats(player, levels, records) {
   createdList.innerHTML = "";
   createdLevels.forEach(l => {
     const li = document.createElement("li");
-    li.innerHTML = `<a href="level.html?id=${l.id}">#${l.rank} - ${l.name}</a>`;
+    li.innerHTML = `<a href="./level.html?id=${l.id}">#${l.rank} - ${l.name}</a>`;
     createdList.appendChild(li);
   });
 
