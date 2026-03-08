@@ -1,5 +1,5 @@
 function loadList() {
-  fetch("./levels.json")
+  fetch("levels.json")
     .then(r => r.json())
     .then(levels => {
       const table = document.getElementById("list");
@@ -39,7 +39,7 @@ function loadList() {
 function loadLevel() {
   const params = new URLSearchParams(window.location.search);
   const id = params.get("id");
-  fetch("./levels.json")
+  fetch("levels.json")
     .then(r => r.json())
     .then(levels => {
       const level = levels.find(l => l.id == id);
@@ -58,7 +58,7 @@ function loadLevel() {
       }
     });
 
-  fetch("./records.json")
+  fetch("records.json")
     .then(r => r.json())
     .then(records => {
       const table = document.getElementById("records");
@@ -85,10 +85,10 @@ function calculateScores() {
   const scores = {};
   let players = [];
 
-  fetch("./levels.json")
+  fetch("levels.json")
     .then(r => r.json())
     .then(levels => {
-      fetch("./records.json")
+      fetch("records.json")
         .then(r => r.json())
         .then(records => {
 
@@ -155,7 +155,7 @@ function showPlayerStats(player, levels, records) {
   completedList.innerHTML = "";
   completedLevels.forEach(l => {
     const li = document.createElement("li");
-    li.innerHTML = `<a href="./level.html?id=${l.id}">#${l.rank} - ${l.name} (${l.points})</a>`;
+    li.innerHTML = `<a href="level.html?id=${l.id}">#${l.rank} - ${l.name} (${l.points})</a>`;
     completedList.appendChild(li);
   });
 
@@ -163,7 +163,7 @@ function showPlayerStats(player, levels, records) {
   verifiedList.innerHTML = "";
   verifiedLevels.forEach(l => {
     const li = document.createElement("li");
-    li.innerHTML = `<a href="./level.html?id=${l.id}">#${l.rank} - ${l.name}</a>`;
+    li.innerHTML = `<a href="level.html?id=${l.id}">#${l.rank} - ${l.name}</a>`;
     verifiedList.appendChild(li);
   });
 
@@ -171,7 +171,7 @@ function showPlayerStats(player, levels, records) {
   createdList.innerHTML = "";
   createdLevels.forEach(l => {
     const li = document.createElement("li");
-    li.innerHTML = `<a href="./level.html?id=${l.id}">#${l.rank} - ${l.name}</a>`;
+    li.innerHTML = `<a href="level.html?id=${l.id}">#${l.rank} - ${l.name}</a>`;
     createdList.appendChild(li);
   });
 
