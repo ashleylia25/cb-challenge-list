@@ -1,0 +1,162 @@
+body{
+background:#0f0f14;
+color:#e4e4e7;
+font-family:Segoe UI, Arial;
+margin:0;
+}
+
+/* Landing Page Styles */
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #0f0f14, #17171c);
+  text-align: center;
+  color: white;
+}
+
+.landing-title {
+  font-size: 70px;
+  font-weight: bold;
+  margin: 0;
+  color: #5aa2ff;
+  text-shadow: 0 0 5px #5aa2ff;
+}
+
+.landing-subtitle {
+  font-size: 24px;
+  margin: 10px 0 30px 0;
+  color: #aaa;
+}
+
+.enter-button {
+  padding: 15px 35px;
+  background: #5aa2ff;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.enter-button:hover {
+  background: #4d8cff;
+  transform: scale(1.03);
+}
+
+/* NAVBAR */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+background:#17171c;
+border-bottom:1px solid #2a2a32;
+}
+
+.logo{
+font-weight:bold;
+font-size:20px;
+}
+
+.nav-links a{
+margin-left:20px;
+color:#aaa;
+text-decoration:none;
+}
+
+.nav-links a:hover{
+color:white;
+}
+
+/* main cont */
+
+.container{
+max-width:1000px;
+margin:auto;
+padding:40px 20px;
+}
+
+/* table */
+
+.list-table{
+width:100%;
+border-collapse:collapse;
+margin-top:20px;
+background:#17171c;
+border-radius:8px;
+overflow:hidden;
+}
+
+.list-table th{
+text-align:left;
+padding:14px;
+background:#1f1f26;
+font-weight:600;
+}
+
+.list-table td{
+padding:14px;
+border-top:1px solid #2a2a32;
+}
+
+.list-table tr:hover{
+background:#23232b;
+}
+
+.list-table a{
+color:#5aa2ff;
+text-decoration:none;
+}
+
+/* level card */
+
+.level-card{
+background:#17171c;
+padding:25px;
+border-radius:8px;
+margin-bottom:30px;
+box-shadow:0 0 10px rgba(0,0,0,0.4);
+}
+
+.top1{
+color:#ff6464;
+font-weight:bold;
+}
+
+.top10{
+color:#ffb347;
+}
+
+.top50{
+color:#6bbcff;
+}
+
+/* phone friendly */
+
+@media (max-width:700px){
+
+.list-table{
+font-size:14px;
+}
+
+.navbar{
+flex-direction:column;
+gap:10px;
+}
+
+}
+
+.level-stats{
+background:#1f1f26;
+padding:20px;
+border-radius:8px;
+margin-bottom:20px;
+}
+
+.level-stats p{
+margin:8px 0;
+}

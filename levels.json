@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "rank": 1,
+    "name": "grif",
+    "creator": "ItzKepler",
+    "verifier": "Verified by ItzKepler",
+    "video": "https://www.youtube.com/watch?v=mp8TSHLoW8Q",
+    "points": 150
+  },
+  {
+    "id": 2,
+    "rank": 2,
+    "name": "jpegmafia challenge",
+    "creator": "rhys18",
+    "verifier": "Verified by rhys18",
+    "video": "https://www.youtube.com/watch?v=2CGFU1lBdCI",
+    "points": 140
+  }
+]
