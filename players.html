@@ -1,70 +1,73 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<base href="/cb-challenge-list/">
-<title>CBCL - Stats Viewer</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <base href="/cb-challenge-list/">
+  <title>CBCL - Stats Viewer</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<nav class="navbar">
-  <div class="logo">CBCL</div>
-  <div class="nav-links">
-    <a href="index.html">List</a>
-    <a href="players.html">Stats Viewer</a>
-  </div>
-</nav>
-
-<div class="container">
-  <h1>Stats Viewer</h1>
-  <table class="list-table">
-    <thead>
-      <tr>
-        <th>Rank</th>
-        <th>Player</th>
-        <th>Points</th>
-      </tr>
-    </thead>
-    <tbody id="playersList"></tbody>
-  </table>
-</div>
-
-<!-- player stats -->
-<div id="playerModal" class="modal">
-  <div class="modal-content">
-    <span id="closeModal">&times;</span>
-    <h2 id="modalPlayerName"></h2>
-
-    <div class="modal-summary">
-      <p><strong>Total Points:</strong> <span id="modalPoints"></span></p>
-      <p><strong>Challenges Completed:</strong> <span id="modalCompletedCount"></span></p>
-      <p><strong>Challenges Verified:</strong> <span id="modalVerifiedCount"></span></p>
-      <p><strong>Challenges Created:</strong> <span id="modalCreatedCount"></span></p>
+  <nav class="navbar">
+    <div class="logo">CBCL</div>
+    <div class="nav-links">
+      <a href="index.html">List</a>
+      <a href="players.html">Stats Viewer</a>
     </div>
+  </nav>
 
-    <div class="modal-breakdown">
-      <h3>Completed Levels</h3>
-      <ul id="modalCompletedList"></ul>
+  <div class="container">
+    <h1>Stats Viewer</h1>
+    <table class="list-table">
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>Player</th>
+          <th>Points</th>
+        </tr>
+      </thead>
+      <tbody id="playersList"></tbody>
+    </table>
+  </div>
 
-      <h3>Verified Levels</h3>
-      <ul id="modalVerifiedList"></ul>
+  <!-- player stats -->
+  <div id="playerModal" class="modal">
+    <div class="modal-content">
+      <span id="closeModal">&times;</span>
+      <h2 id="modalPlayerName"></h2>
 
-      <h3>Created Levels</h3>
-      <ul id="modalCreatedList"></ul>
+      <div class="modal-summary">
+        <p><strong>Total Points:</strong> <span id="modalPoints"></span></p>
+        <p><strong>Challenges Completed:</strong> <span id="modalCompletedCount"></span></p>
+        <p><strong>Challenges Verified:</strong> <span id="modalVerifiedCount"></span></p>
+        <p><strong>Challenges Created:</strong> <span id="modalCreatedCount"></span></p>
+      </div>
+
+      <div class="modal-breakdown">
+        <h3>Completed Levels</h3>
+        <ul id="modalCompletedList"></ul>
+
+        <h3>Verified Levels</h3>
+        <ul id="modalVerifiedList"></ul>
+
+        <h3>Created Levels</h3>
+        <ul id="modalCreatedList"></ul>
+      </div>
     </div>
   </div>
-</div>
 
-<script src="script.js"></script>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  if (document.getElementById("playersList")) {
-    calculateScores();
-    setupModal();
-  }
-});
-</script>
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      if (document.getElementById("playersList")) {
+        calculateScores();
+        setupModal();
+      }
+    });
+  </script>
 
 </body>
+
 </html>

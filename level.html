@@ -1,52 +1,55 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<base href="/cb-challenge-list/">
-<title>CBCL - Level</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <base href="/cb-challenge-list/">
+  <title>CBCL - Level</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<nav class="navbar">
-  <div class="logo">CBCL</div>
-  <div class="nav-links">
-    <a href="index.html">List</a>
-    <a href="players.html">Stats Viewer</a>
-  </div>
-</nav>
-
-<div class="container">
-  <div class="level-card">
-    <h1 id="levelName"></h1>
-    <div class="level-stats">
-      <p><strong>Creator:</strong> <span id="creator"></span></p>
-      <p><strong>Verifier:</strong> <span id="verifier"></span></p>
-      <p><strong>Rank:</strong> <span id="rank"></span></p>
-      <p><strong>Points:</strong> <span id="points"></span></p>
+  <nav class="navbar">
+    <div class="logo">CBCL</div>
+    <div class="nav-links">
+      <a href="index.html">List</a>
+      <a href="players.html">Stats Viewer</a>
     </div>
-    <div id="videoContainer"></div>
-    <h2>Completions</h2>
-    <table class="list-table">
-      <thead>
-        <tr>
-          <th>Player</th>
-          <th>Video</th>
-        </tr>
-      </thead>
-      <tbody id="records"></tbody>
-    </table>
-  </div>
-</div>
+  </nav>
 
-<script src="script.js"></script>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  if (document.getElementById("levelName")) {
-    loadLevel();
-  }
-});
-</script>
+  <div class="container">
+    <div class="level-card">
+      <h1 id="levelName"></h1>
+      <div class="level-stats">
+        <p><strong>Creator:</strong> <span id="creator"></span></p>
+        <p><strong>Verifier:</strong> <span id="verifier"></span></p>
+        <p><strong>Rank:</strong> <span id="rank"></span></p>
+        <p><strong>Points:</strong> <span id="points"></span></p>
+      </div>
+      <div id="videoContainer"></div>
+      <h2>Completions</h2>
+      <table class="list-table">
+        <thead>
+          <tr>
+            <th>Player</th>
+            <th>Video</th>
+          </tr>
+        </thead>
+        <tbody id="records"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      if (document.getElementById("levelName")) {
+        loadLevel();
+      }
+    });
+  </script>
 
 </body>
+
 </html>

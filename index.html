@@ -1,46 +1,49 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<base href="/cb-challenge-list/">
-<title>CBCL - Challenge List</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <base href="/cb-challenge-list/">
+  <title>CBCL - Challenge List</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<nav class="navbar">
-  <div class="logo">CBCL</div>
-  <div class="nav-links">
-    <a href="index.html">List</a>
-    <a href="players.html">Stats Viewer</a>
+  <nav class="navbar">
+    <div class="logo">CBCL</div>
+    <div class="nav-links">
+      <a href="index.html">List</a>
+      <a href="players.html">Stats Viewer</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1 style="text-align: center;">CBCL Challenge List</h1>
+    <input type="text" id="search" placeholder="Search levels or creators..." />
+
+    <table class="list-table">
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>Level</th>
+          <th>Creator</th>
+        </tr>
+      </thead>
+      <tbody id="list"></tbody>
+    </table>
   </div>
-</nav>
 
-<div class="container">
-  <h1 style="text-align: center;">CBCL Challenge List</h1>
-  <input type="text" id="search" placeholder="Search levels or creators..." />
-
-  <table class="list-table">
-    <thead>
-      <tr>
-        <th>Rank</th>
-        <th>Level</th>
-        <th>Creator</th>
-      </tr>
-    </thead>
-    <tbody id="list"></tbody>
-  </table>
-</div>
-
-<script src="script.js"></script>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  if (document.getElementById("list")) {
-    loadList();
-    enableSearch();
-  }
-});
-</script>
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      if (document.getElementById("list")) {
+        loadList();
+        enableSearch();
+      }
+    });
+  </script>
 
 </body>
+
 </html>
