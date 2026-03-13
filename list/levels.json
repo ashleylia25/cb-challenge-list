@@ -6,7 +6,9 @@
     "creator": "ItzKepler",
     "verifier": "ItzKepler",
     "video": "https://www.youtube.com/watch?v=mp8TSHLoW8Q",
-    "points": 150
+    "points": 150,
+    "gd_id": "134947477",
+    "song": "KzX - Stalemate"
   },
   {
     "id": 2,
@@ -15,6 +17,8 @@
     "creator": "rhys18",
     "verifier": "rhys18",
     "video": "https://www.youtube.com/watch?v=unxi6cuwYn8",
-    "points": 140
+    "points": 140,
+    "gd_id": "117140427",
+    "song": ""
   }
 ]
