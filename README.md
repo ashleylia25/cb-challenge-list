@@ -2,6 +2,7 @@
 *Idea proposed by Kepler*
 
 This website is meant for keeping track of all the Geometry Dash challenge levels created by people in CBCL.
+For any questions regarding the list, DM me on Discord: meldylia25
 
 ## Includes:
 1. A list of all the challenges ranked in order from hardest to easiest. (With a search bar)
