@@ -13,12 +13,166 @@
   {
     "id": 2,
     "rank": 2,
+    "name": "kelp condo",
+    "creator": "rhys18",
+    "verifier": "rhys18",
+    "video": "https://www.youtube.com/watch?v=unxi6cuwYn8",
+    "points": 144,
+    "gd_id": "132915257",
+    "song": "Creo - Flow"
+  },
+  {
+    "id": 3,
+    "rank": 3,
     "name": "jpegmafia challenge",
     "creator": "rhys18",
     "verifier": "rhys18",
     "video": "https://www.youtube.com/watch?v=unxi6cuwYn8",
-    "points": 140,
+    "points": 139,
     "gd_id": "117140427",
+    "song": ""
+  },
+  {
+    "id": 4,
+    "rank": 4,
+    "name": "bevenem challenge",
+    "creator": "rhys18",
+    "verifier": "rhys18",
+    "video": "https://www.youtube.com/watch?v=unxi6cuwYn8",
+    "points": 134,
+    "gd_id": "129399806",
+    "song": ""
+  },
+  {
+    "id": 5,
+    "rank": 5,
+    "name": "kepler cler",
+    "creator": "rhys18",
+    "verifier": "rhys18",
+    "video": "https://www.youtube.com/watch?v=unxi6cuwYn8",
+    "points": 129,
+    "gd_id": "110422060",
+    "song": ""
+  },
+  {
+    "id": 6,
+    "rank": 6,
+    "name": "mario bro",
+    "creator": "rhys18",
+    "verifier": "rhys18",
+    "video": "https://www.youtube.com/watch?v=unxi6cuwYn8",
+    "points": 124,
+    "gd_id": "135191496",
+    "song": ""
+  },
+  {
+    "id": 7,
+    "rank": 7,
+    "name": "3 seconds of joy",
+    "creator": "rhys18",
+    "verifier": "rhys18",
+    "video": "https://www.youtube.com/watch?v=unxi6cuwYn8",
+    "points": 120,
+    "gd_id": "134670482",
+    "song": ""
+  },
+  {
+    "id": 8,
+    "rank": 8,
+    "name": "tuff ahh ship",
+    "creator": "rhys18",
+    "verifier": "rhys18",
+    "video": "https://www.youtube.com/watch?v=unxi6cuwYn8",
+    "points": 116,
+    "gd_id": "132545478",
+    "song": ""
+  },
+  {
+    "id": 9,
+    "rank": 9,
+    "name": "a crow nicks",
+    "creator": "rhys18",
+    "verifier": "rhys18",
+    "video": "https://www.youtube.com/watch?v=unxi6cuwYn8",
+    "points": 112,
+    "gd_id": "70134001",
+    "song": ""
+  },
+  {
+    "id": 10,
+    "rank": 10,
+    "name": "singletap simulator",
+    "creator": "rhys18",
+    "verifier": "rhys18",
+    "video": "https://www.youtube.com/watch?v=unxi6cuwYn8",
+    "points": 108,
+    "gd_id": "134673295",
+    "song": ""
+  },
+  {
+    "id": 11,
+    "rank": 11,
+    "name": "zjb",
+    "creator": "rhys18",
+    "verifier": "rhys18",
+    "video": "https://www.youtube.com/watch?v=unxi6cuwYn8",
+    "points": 104,
+    "gd_id": "132336552",
+    "song": ""
+  },
+  {
+    "id": 12,
+    "rank": 12,
+    "name": "volt europa challenge",
+    "creator": "rhys18",
+    "verifier": "rhys18",
+    "video": "https://www.youtube.com/watch?v=unxi6cuwYn8",
+    "points": 100,
+    "gd_id": "133395833",
+    "song": ""
+  },
+  {
+    "id": 13,
+    "rank": 13,
+    "name": "kepler possibly clea",
+    "creator": "rhys18",
+    "verifier": "rhys18",
+    "video": "https://www.youtube.com/watch?v=unxi6cuwYn8",
+    "points": 96,
+    "gd_id": "86143266",
+    "song": ""
+  },
+  {
+    "id": 14,
+    "rank": 14,
+    "name": "ChamberCroniX LMFAOO",
+    "creator": "rhys18",
+    "verifier": "rhys18",
+    "video": "https://www.youtube.com/watch?v=unxi6cuwYn8",
+    "points": 93,
+    "gd_id": "66407485",
+    "song": ""
+  },
+  {
+    "id": 15,
+    "rank": 15,
+    "name": "aekoni tung tun",
+    "creator": "rhys18",
+    "verifier": "rhys18",
+    "video": "https://www.youtube.com/watch?v=unxi6cuwYn8",
+    "points": 90,
+    "gd_id": "135570180",
+    "song": ""
+  },
+  {
+    "id": 16,
+    "rank": 16,
+    "name": "adam challenge",
+    "creator": "rhys18",
+    "verifier": "rhys18",
+    "video": "https://www.youtube.com/watch?v=unxi6cuwYn8",
+    "points": 87,
+    "gd_id": "134232001",
     "song": ""
   }
 ]
